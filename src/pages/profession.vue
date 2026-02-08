@@ -5,6 +5,7 @@ import { HiItem, HiSelection } from "hoci";
 import { cls } from "tslx";
 import { defineComponent, renderList } from "vue";
 import { useDressingStore } from "@/store";
+import { assetUrl } from "@/utils/asset";
 
 export default defineComponent({
   props: {
@@ -29,7 +30,7 @@ export default defineComponent({
       return {
         width: "26px",
         height: "26px",
-        backgroundImage: "url('/icon/profession.png')",
+        backgroundImage: `url("${assetUrl("/icon/profession.png")}")`,
         backgroundPositionX: `-${index * 26}px`,
         backgroundPositionY: `${0}px`
       };
